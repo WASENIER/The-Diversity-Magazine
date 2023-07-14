@@ -1,9 +1,19 @@
-   <div class="border-bottom" style="margin-bottom:16px;">
+   <div class="border-bottom row" style="margin-bottom:16px; padding-bottom:8px;">
      <!--border bottom bootstrap adds borders-->
-      <h4 style="color:rgb(120,120,120); margin-bottom:4px;">{{job['title']}}</h4>
+     <div class="col-10"> <!--col-9 divides into nine columns, source from bootsrap.com-->
+      <h4 style="color:rgb(120,120,120); margin-bottom:4px;">
+        {{job['title']}}
+      </h4>
       <div><b>Location:</b>{{job['location']}}</div>
       <!--use if function to prevent empty output for salary-->
       {%if 'salary' in job%}
       <div><b>Salary:</b>{{job['salary']}}</div>
       {% endif %}
-    </div>
+     </div>
+     <!-- add apply button below-->
+     <div class="col-2">
+     <button type="button" class="btn btn-outline-primary">Apply</button>
+     </div>
+     </div>
+
+     <!-- created a row and two colums in the row with width 10 and 2.

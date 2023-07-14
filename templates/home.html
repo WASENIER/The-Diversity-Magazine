@@ -16,13 +16,29 @@
   <body>
     <div class="container">
     
-    <h1 class="text-center mt-2 mb-4">Wassen Careers</h1>
+    <h1 class="text-center mt-2 mb-4"> {{company_name}} Careers </h1>
     <img id="banner" src="https://wassen-careers-website--wasenier.repl.co/static/banner2.jpg">
+      
     <h2 class="text-center mt-2 mb-4">About</h2>
+      
 <p class="lead">Welcome to the careers website, where you can find and apply for jobs that match your skills and interests. Whether you are looking for a full-time, part-time, freelance, or remote work, we have a variety of opportunities for you to explore. You can browse jobs by category, location, salary, or company. You can also create a profile, upload your resume, and get personalized recommendations based on your preferences. If you are ready to take the next step in your career, join us today and discover the possibilities. 😊</p>
 
     <h2 class="text-center">Available Positions</h2>
-    <p>Add Positions here</p>
+    <!-- special flask framework templating syntax to insert dynamic data, refer to main.py to see the list -->
+ <div>
+<!-- create a for loop and attach variables from list-->
+    {% for job in jobs %}
+    <div style="margin-bottom:16px;">
+      <h4 style="color:rgb(120,120,120); margin-bottom:4px;">{{job['title']}}</h4>
+      <div><b>Location:</b>{{job['location']}}</div>
+      <!--use if function to prevent empty output for salary-->
+      {%if 'salary' in job%}
+      <div><b>Salary:</b>{{job['salary']}}</div>
+      {% endif %}
+    </div>
+    {% endfor %}
+</div>
+
       
       <div class="text-center">
     <button class="btn btn-primary btn-lg mb-4">Contact Us</button>

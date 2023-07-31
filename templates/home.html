@@ -10,20 +10,24 @@
     
     <title>Wassen Careers</title>
 <style>
-#banner{width: 100%; height: 360px; object-fit: cover;}
+#banner{width: 100%; height: 360px; object-fit: cover; margin-bottom:16px;}
 </style>
   </head>
   <body>
     {% include 'nav.html'%}
+        <img id="banner" src="https://wassen-careers-website--wasenier.repl.co/static/banner2.jpg">
     <div class="container">
     
     <h1 class="text-center mt-2 mb-4"> {{company_name}} Careers </h1>
-    <img id="banner" src="https://wassen-careers-website--wasenier.repl.co/static/banner2.jpg">
-      
-    <h2 class="text-center mt-2 mb-4">About</h2>
-      
-<p class="lead">Welcome to the careers website, where you can find and apply for jobs that match your skills and interests. Whether you are looking for a full-time, part-time, freelance, or remote work, we have a variety of opportunities for you to explore. You can browse jobs by category, location, salary, or company. You can also create a profile, upload your resume, and get personalized recommendations based on your preferences. If you are ready to take the next step in your career, join us today and discover the possibilities. 😊</p>
 
+    <div class="row" style="margin-bottom:40px">  
+   <div class="col-md-6">     <!-- displays on medium screens only-->    
+<p class="lead">Welcome to the careers website, where you can find and apply for jobs that match your skills and interests. Whether you are looking for a full-time, part-time, freelance, or remote work, we have a variety of opportunities for you to explore. You can browse jobs by category, location, salary, or company. You can also create a profile, upload your resume, and get personalized recommendations based on your preferences. If you are ready to take the next step in your career, join us today and discover the possibilities. 😊</p>
+   </div>
+    <div class="d-none d-md-block col-md-6"> <!-- hides image on mobile-->
+      <img src="/static/people.jpg" style="height:300px; border-radius:4px;">
+    </div>
+    </div>
     <h2 class="text-center">Available Positions</h2>
     <!-- special flask framework templating syntax to insert dynamic data, refer to main.py to see the list -->
  <div>
